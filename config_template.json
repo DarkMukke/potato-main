@@ -3,6 +3,7 @@
   "REACTION_TRACKER": [
     {
       "message_id": "<channel-id>-<message-id>",
+      "unhandled_channel": "<channel-id>",
       "reactions": [
         {
           "reaction": "%F0%9F%87%A6",

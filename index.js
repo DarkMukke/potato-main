@@ -11,6 +11,7 @@
  * @typedef ConfigTrackableMessage
  * @type {object}
  * @property {string} message_id
+ * @property {string} unhandled_channel
  * @property {Array.<ConfigReactionEvent>} reactions
  */
 
@@ -71,6 +72,11 @@ client.once(Events.ClientReady, () => {
                 })
                 if ( undefined === eventToHandle ) {
                     console.log(`Unhandled reaction ${reaction.emoji.name} : ${reaction.emoji.identifier} from ${user.tag}.`);
+                    /**
+                     * @type {FetchedChannel}
+                     */
+                    const channel = client.channels.cache.get(tracker.unhandled_channel);
+                    channel.send(`Unhandled reaction ${reaction.emoji.name} : ${reaction.emoji.identifier} from ${user.tag} for message ${messageId}.`);
                 } else {
                     const message_params = {
                         role: roleMention(eventToHandle.target_role),
