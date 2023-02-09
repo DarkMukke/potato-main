@@ -1,0 +1,23 @@
+{
+  "BOT_TOKEN": "",
+  "REACTION_TRACKER" : {
+    "guilds": [
+      {
+        "guild_id" : "",
+        "messages_to_track" : [
+          {
+            "message_id" : "",
+            "reactions": [
+              {
+                "reaction" : "",
+                "target_channel" : "",
+                "target_role" : "",
+                "notification" : ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
