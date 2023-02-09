@@ -1,23 +1,16 @@
 {
   "BOT_TOKEN": "",
-  "REACTION_TRACKER" : {
-    "guilds": [
-      {
-        "guild_id" : "",
-        "messages_to_track" : [
-          {
-            "message_id" : "",
-            "reactions": [
-              {
-                "reaction" : "",
-                "target_channel" : "",
-                "target_role" : "",
-                "notification" : ""
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+  "REACTION_TRACKER": [
+    {
+      "message_id": "<channel-id>-<message-id>",
+      "reactions": [
+        {
+          "reaction": "%F0%9F%87%A6",
+          "target_channel": "<channel-id>",
+          "target_role": "<role-id>",
+          "notification": "{{role}}: {{user}} has added a reacting to message <message-id> with %F0%9F%87%A6"
+        }
+      ]
+    }
+  ]
 }
